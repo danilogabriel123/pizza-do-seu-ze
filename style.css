@@ -1,0 +1,424 @@
+/*
+   Pizzaria do Zé — style.css
+
+/* reset básico e fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*header*/
+header {
+  background-color: #b71c1c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+}
+
+.logo-nome {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/*banner*/
+.banner {
+  background: linear-gradient(135deg, #b71c1c, #d32f2f);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.banner p {
+  font-size: 1.05rem;
+  max-width: 520px;
+  margin: 0 auto 30px auto;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/*botao*/
+.btn-principal {
+  background-color: #ff8f00;
+  color: white;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s, transform 0.15s;
+}
+
+.btn-principal:hover {
+  background-color: #e65100;
+  transform: translateY(-2px);
+}
+
+/*sobre */
+.sobre {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.sobre h2 {
+  font-size: 1.8rem;
+  color: #b71c1c;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #b71c1c;
+  padding-bottom: 8px;
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.sobre-texto p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.sobre-numeros {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.numero-card {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff8f00;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.numero {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #b71c1c;
+}
+
+.numero-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* cardapio */
+.cardapio {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.cardapio h2 {
+  font-size: 1.8rem;
+  color: #b71c1c;
+  margin-bottom: 8px;
+  border-bottom: 3px solid #b71c1c;
+  padding-bottom: 8px;
+}
+
+.subtitulo {
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+/* grid dos cards */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* card individual */
+.card-produto {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-produto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card-emoji {
+  background-color: #fff3e0;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 22px 0;
+}
+
+.card-info {
+  padding: 16px;
+}
+
+.card-info h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.card-info p {
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.card-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.preco {
+  font-weight: 700;
+  color: #b71c1c;
+  font-size: 1rem;
+}
+
+/* controle de quantidade */
+.controle-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+}
+
+.btn-qty {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #b71c1c;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s;
+}
+
+.btn-qty:hover {
+  background-color: #b71c1c;
+  color: white;
+}
+
+.qty {
+  font-weight: 700;
+  font-size: 0.95rem;
+  min-width: 18px;
+  text-align: center;
+}
+
+/* card com item selecionado */
+.card-produto.selecionado {
+  border-color: #b71c1c;
+  border-width: 2px;
+}
+
+/* secao pedido */
+.secao-pedido {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.pedido-box {
+  background-color: #fff8f5;
+  border: 2px solid #ffccbc;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pedido-box h2 {
+  font-size: 1.4rem;
+  color: #b71c1c;
+  margin-bottom: 20px;
+}
+
+#lista-pedido {
+  margin-bottom: 20px;
+}
+
+#msg-vazio {
+  color: #aaa;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.item-pedido {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0e0d6;
+  font-size: 0.9rem;
+}
+
+.pedido-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b71c1c;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.pedido-total strong {
+  font-size: 1.3rem;
+}
+
+/* footer */
+footer {
+  background-color: #1a1a1a;
+  color: #ccc;
+  padding: 40px 0 20px 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+.footer-logo span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-info p {
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.footer-copy {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #777;
+  grid-column: 1 / -1;
+}
+
+/* responsivo */
+@media (max-width: 750px) {
+  .header-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 12px;
+    font-size: 0.82rem;
+  }
+
+  .banner h1 {
+    font-size: 1.7rem;
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .produtos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner h1 {
+    font-size: 1.4rem;
+  }
+}

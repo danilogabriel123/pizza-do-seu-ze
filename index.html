@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaria do Zé</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- ícones simples do google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+</head>
+<body>
+
+  <!-- cabeçalho -->
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">🍕</span>
+        <span class="logo-nome">Pizzaria do seu Zé</span>
+      </div>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#pedido">Meu Pedido</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- banner principal -->
+  <section class="banner">
+    <div class="banner-texto">
+      <h1>Pizza boa é pizza do Zé 🍕</h1>
+      <p>Massa artesanal, ingredientes frescos e muito sabor. Peça agora e receba em até 40 minutos!</p>
+      <a href="#cardapio" class="btn-principal">Ver Cardápio</a>
+    </div>
+  </section>
+
+  <!-- sobre -->
+  <section id="sobre" class="sobre">
+    <div class="container">
+      <h2>Sobre Nós</h2>
+      <div class="sobre-grid">
+        <div class="sobre-texto">
+          <p><strong>Na Pizzaria do Zé, a pizza é feita com aquele tempero especial que só a gente sabe dar, sabor caseiro e muita dedicação!</strong></p>
+          <p>Preços justos e sabor de sobra, porque a gente quer que todo mundo aproveite o melhor da região.</p>
+          <p>Funcionamos de terça a domingo, das 18h às 23h. Pode pedir pra entrega ou vir curtir um ambiente tranquilo aqui com a gente.</p>
+          <p>Chega mais e experimente uma pizza que vai fazer você querer voltar sempre!</p>
+        </div>
+        <div class="sobre-numeros">
+          <div class="numero-card">
+            <span class="numero">9+</span>
+            <span class="numero-label">Anos de história</span>
+          </div>
+          <div class="numero-card">
+            <span class="numero">500+</span>
+            <span class="numero-label">Clientes atendidos</span>
+          </div>
+          <div class="numero-card">
+            <span class="numero">15+</span>
+            <span class="numero-label">Sabores no cardápio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- cardapio e produtos -->
+  <section id="cardapio" class="cardapio">
+    <div class="container">
+      <h2>Nosso Cardápio</h2>
+      <p class="subtitulo">Adicione os itens ao seu pedido usando os botões + e −</p>
+
+      <div class="produtos-grid">
+
+        <!-- Produto 1 -->
+        <div class="card-produto" data-preco="41.90">
+          <div class="card-emoji">🍕</div>
+          <div class="card-info">
+            <h3>Pizza Mussarela</h3>
+            <p>Molho de tomate caseiro, mussarela fatiada e orégano. Tamanho grande, 8 fatias.</p>
+            <div class="card-rodape">
+              <span class="preco">R$ 41,90</span>
+              <div class="controle-qty">
+                <button class="btn-qty" onclick="diminuir(this)">−</button>
+                <span class="qty">0</span>
+                <button class="btn-qty" onclick="aumentar(this)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="card-produto" data-preco="49.90">
+          <div class="card-emoji">🍗</div>
+          <div class="card-info">
+            <h3>Pizza Frango com Catupiry</h3>
+            <p>Frango desfiado temperado na hora com catupiry cremoso. A mais pedida da casa!</p>
+            <div class="card-rodape">
+              <span class="preco">R$ 49,90</span>
+              <div class="controle-qty">
+                <button class="btn-qty" onclick="diminuir(this)">−</button>
+                <span class="qty">0</span>
+                <button class="btn-qty" onclick="aumentar(this)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="card-produto" data-preco="35.50">
+          <div class="card-emoji">🌶️</div>
+          <div class="card-info">
+            <h3>Pizza Calabresa</h3>
+            <p>Calabresa acebolada com molho especial da casa. Sabor marcante pra quem gosta.</p>
+            <div class="card-rodape">
+              <span class="preco">R$ 35,50</span>
+              <div class="controle-qty">
+                <button class="btn-qty" onclick="diminuir(this)">−</button>
+                <span class="qty">0</span>
+                <button class="btn-qty" onclick="aumentar(this)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 4 -->
+        <div class="card-produto" data-preco="58.00">
+          <div class="card-emoji">🥩</div>
+          <div class="card-info">
+            <h3>Pizza Portuguesa</h3>
+            <p>Presunto, ovos, cebola, azeitona e mussarela. Clássica e muito gostosa.</p>
+            <div class="card-rodape">
+              <span class="preco">R$ 58,00</span>
+              <div class="controle-qty">
+                <button class="btn-qty" onclick="diminuir(this)">−</button>
+                <span class="qty">0</span>
+                <button class="btn-qty" onclick="aumentar(this)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 5 -->
+        <div class="card-produto" data-preco="41.50">
+          <div class="card-emoji">🫒</div>
+          <div class="card-info">
+            <h3>Pizza 4 Queijos</h3>
+            <p>Mussarela, catupiry, provolone e parmesão. Pra quem ama queijo de verdade.</p>
+            <div class="card-rodape">
+              <span class="preco">R$ 41,50</span>
+              <div class="controle-qty">
+                <button class="btn-qty" onclick="diminuir(this)">−</button>
+                <span class="qty">0</span>
+                <button class="btn-qty" onclick="aumentar(this)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 6 -->
+        <div class="card-produto" data-preco="12.50">
+          <div class="card-emoji">🥤</div>
+          <div class="card-info">
+            <h3>Refrigerante 2L</h3>
+            <p>Coca-Cola, Guaraná Antarctica ou Fanta Laranja. Bem geladinho!</p>
+            <div class="card-rodape">
+              <span class="preco">R$ 12,50</span>
+              <div class="controle-qty">
+                <button class="btn-qty" onclick="diminuir(this)">−</button>
+                <span class="qty">0</span>
+                <button class="btn-qty" onclick="aumentar(this)">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- resumo pedido -->
+  <section id="pedido" class="secao-pedido">
+    <div class="container">
+      <div class="pedido-box">
+        <h2>🛒 Meu Pedido</h2>
+        <div id="lista-pedido">
+          <p id="msg-vazio">Você ainda não adicionou nenhum item.</p>
+        </div>
+        <div class="pedido-total">
+          <span>Total:</span>
+          <strong id="valor-total">R$ 0,00</strong>
+        </div>
+        <button class="btn-principal" onclick="finalizarPedido()">Finalizar Pedido 🍕</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- rodapé -->
+  <footer id="contato">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span>🍕 Pizzaria do seu Zé</span>
+      </div>
+      <div class="footer-info">
+        <p>📍 Rua do zé, 123 — Centro</p>
+        <p>📞 (99) 12345-6789</p>
+        <p>🕐 Ter a Dom: 18h às 23h</p>
+      </div>
+      <div class="footer-copy">
+        <p>© 2026 Pizzaria do seu Zé — Todos os direitos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
